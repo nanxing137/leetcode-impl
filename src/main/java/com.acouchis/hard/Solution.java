@@ -23,6 +23,7 @@ class Solution {
         int length = mountainArr.length();
         int maxV;
         int maxIndex;
+
         for (int l = 0, r = length; ; ) {
             int index = (l + r) / 2;
 
