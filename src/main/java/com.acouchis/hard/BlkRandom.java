@@ -28,7 +28,7 @@ public class BlkRandom {
 
 
     public BlkRandom(int N, int[] blacklist) {
-        Arrays.sort(blacklist);
+
 
         if (blacklist.length < (N >> 2)) {
             type = true;
@@ -36,7 +36,7 @@ public class BlkRandom {
             n = N;
             return;
         }
-
+        Arrays.sort(blacklist);
         if (blacklist.length == 0) {
             white = IntStream.range(0, N).boxed().collect(Collectors.toList());
             return;
